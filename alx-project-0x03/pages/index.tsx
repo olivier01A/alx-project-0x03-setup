@@ -50,7 +50,7 @@ const Home: React.FC<PageProps> = ({ title, description }) => {
   );
 };
 
-["import { PageRouteProps }"]
+-["import { PageRouteProps }"]
 export default Home;
 import { PageProps } from "@/interface";
 
