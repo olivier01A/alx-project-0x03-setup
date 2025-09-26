@@ -1,0 +1,13 @@
+1.node_modules/react-icons/fa
+2.npm list -g react-icons
+3.npm init -y
+  npm install react-icons
+
+
+
+
+4.import { FaBeer } from "react-icons/fa";
+
+export default function Test() {
+  return <h3>Cheers! <FaBeer /></h3>;
+}
