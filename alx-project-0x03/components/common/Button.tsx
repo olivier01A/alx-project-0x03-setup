@@ -1,13 +1,6 @@
 ## components/common/Button.tsx
 
-interface ButtonProps {
-  buttonLabel: string
-  buttonSize?: string
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green'
-  action?: () => void
-}
-
-
+import { ButtonProps } from "@/interface";
 const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: ButtonProps) => {
 
   const backgroundColorClass = buttonBackgroundColor ? {
@@ -19,23 +12,10 @@ const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: Butt
 
 
   return (
-    <button onClick={action} className={`${backgroundColorClass} ${buttonSize} px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white`}>
+    <button onClick={action} className={`${backgroundColorClass} ${buttonSize} px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white cursor-pointer`}>
       {buttonLabel}
     </button>
   )
 }
 
 export default Button;
-
-interface ButtonProps {
-  label: string;
-  onClick: () => void;
-}
-
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
-  return <button onClick={onClick}>{label}</button>;
-};
-
-
-
-
