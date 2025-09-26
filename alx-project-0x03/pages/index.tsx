@@ -1,4 +1,4 @@
-["import { PageRouteProps }"] 
+
 
 import Button from "@/components/common/Button";
 import { useRouter } from "next/router";
@@ -35,3 +35,31 @@ export default function Home() {
     </div>
   );
 }
+
+interface PageProps {
+  title: string;
+  description: string;
+}
+
+const Home: React.FC<PageProps> = ({ title, description }) => {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  );
+};
+
+export default Home;
+import { PageProps } from "@/interface";
+
+const Home: React.FC<PageProps> = ({ title, description }) => {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  );
+};
+
+export default Home;
